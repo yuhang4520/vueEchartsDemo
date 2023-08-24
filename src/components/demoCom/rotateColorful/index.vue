@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: "rotateColorful",
+  name: "rotateColorfulCom",
   data() {
     return {
       option: null,
@@ -171,13 +171,16 @@ export default {
 
 <style lang="scss" scoped>
 .sn-container {
-  left: 512px;
-  top: 1120px;
-  width: 432px;
-  height: 400px;
+  position: relative;
+  width: 100%;
+  position: relative;
+  height: 5rem;
+  margin-bottom: 0.1875rem;
+
   .chartsdom {
     width: 100%;
     height: 100%;
+    left: -5%;
   }
 
   .pie {
@@ -195,17 +198,17 @@ export default {
       background-position: center center;
     }
     .pie1 {
-      background-image: url(../../assets/img/whcircle.png);
+      background-image: url(../../../assets/img/whcircle.png);
       animation: mymove 20s linear infinite;
       -webkit-animation: mymove 20s linear infinite;
     }
     .pie2 {
-      background-image: url(../../assets/img/circle2.png);
+      background-image: url(../../../assets/img/circle2.png);
       animation: moveto 20s linear infinite;
       -webkit-animation: moveto 20s linear infinite;
     }
     .pie3 {
-      background-image: url(../../assets/img/inner.png);
+      background-image: url(../../../assets/img/inner.png);
     }
     .pie4 {
       position: absolute;

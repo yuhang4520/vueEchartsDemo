@@ -1,43 +1,51 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Login',
-    component: () => import('@/views/Login.vue'),
+    path: "/",
+    name: "Login",
+    component: () => import("@/views/Login.vue"),
     meta: {
-      title: '登录界面'
-    }
+      title: "登录界面",
+    },
   },
   {
-    path: '/login',
-    redirect: '/'
+    path: "/login",
+    redirect: "/",
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: () => import('@/views/Home.vue'),
+    path: "/demo",
+    name: "Demo",
+    component: () => import("@/views/Demo.vue"),
     meta: {
-      title: '酷屏首页统计图'
-    }
+      title: "驾驶舱demo",
+    },
   },
   {
-    path: '/brand',
-    name: 'Brand',
-    component: () => import('@/views/Brand.vue'),
+    path: "/home",
+    name: "Home",
+    component: () => import("@/views/Home.vue"),
     meta: {
-      title: '公司品牌介绍'
-    }
-  }
-]
+      title: "酷屏首页统计图",
+    },
+  },
+  {
+    path: "/brand",
+    name: "Brand",
+    component: () => import("@/views/Brand.vue"),
+    meta: {
+      title: "公司品牌介绍",
+    },
+  },
+];
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: "hash",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
